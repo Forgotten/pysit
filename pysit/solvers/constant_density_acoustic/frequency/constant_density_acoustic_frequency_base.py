@@ -6,8 +6,11 @@ from ..constant_density_acoustic_base import *
 
 from pysit.util.solvers import inherit_dict
 
-from pysit.util.wrappers.petsc import PetscWrapper
-
+try:
+    from pysit.util.wrappers.petsc import PetscWrapper
+except ImportError:
+    print 'PETSc is not installed'
+    
 __all__ = ['ConstantDensityAcousticFrequencyBase']
 
 __docformat__ = "restructuredtext en"
