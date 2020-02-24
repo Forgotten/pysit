@@ -40,7 +40,8 @@ if __name__ == '__main__':
     base_model = solver.ModelParameters(m,{'C': C})
     tt = time.time()
     # generate_seismic_data(shots, solver, base_model, frequencies=frequencies, petsc='mkl_pardiso')
-    generate_seismic_data(shots, solver, base_model, frequencies=frequencies, petsc='mumps')
+    # generate_seismic_data(shots, solver, base_model, frequencies=frequencies, petsc='mumps')
+    generate_seismic_data(shots, solver, base_model, frequencies=frequencies)
     # generate_seismic_data_from_file(shots,save_method='h5py')
     print('Data generation: {0}s'.format(time.time()-tt))
 
@@ -70,7 +71,8 @@ if __name__ == '__main__':
     loop_configuration=[(20,{'frequencies' : [2.0, 3.5, 5.0]})]
 
     # result = invalg(shots, initial_value, loop_configuration, verbose=True, status_configuration=status_configuration, petsc='mkl_pardiso')
-    result = invalg(shots, initial_value, loop_configuration, verbose=True, status_configuration=status_configuration, petsc='mumps')
+    # result = invalg(shots, initial_value, loop_configuration, verbose=True, status_configuration=status_configuration, petsc='mumps')
+    result = invalg(shots, initial_value, loop_configuration, verbose=True, status_configuration=status_configuration)
     print('...run time:  {0}s'.format(time.time()-tt))
 
     obj_vals = np.array([v for k,v in list(invalg.objective_history.items())])

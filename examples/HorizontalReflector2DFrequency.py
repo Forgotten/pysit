@@ -92,7 +92,7 @@ if __name__ == '__main__':
 
     loop_configuration=[(60,{'frequencies' : [2.0, 3.5, 5.0]}), (15,{'frequencies' : [6.5, 8.0, 9.5]})] #3 steps at one set of frequencies and 3 at another set
 
-    loop_configuration=[(2,{'frequencies' : [2.0, 3.5, 5.0]})]
+    #loop_configuration=[(2,{'frequencies' : [2.0, 3.5, 5.0]})]
 
     result = invalg(shots, initial_value, loop_configuration, verbose=True, status_configuration=status_configuration)
 

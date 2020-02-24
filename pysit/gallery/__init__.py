@@ -2,6 +2,7 @@ from .horizontal_reflector import *
 from .point_reflector import *
 from .layered_medium import *
 from .sonar import *
+from .triangular_reflector import *
 
 from .bp import *
 from .marmousi import *
